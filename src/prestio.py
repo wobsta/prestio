@@ -95,7 +95,7 @@ class Prestio:
                             return False
                     r = requests.get(data[key]['download'], auth=(self.login, self.password))
                     assert r.status_code == 200, r.text
-                    dest.joinpath('@' + key + suffix).open('wb').write(r.content)
+                    dest.joinpath('@' + key + suffix.replace('jpeg', 'jpg')).open('wb').write(r.content)
                     if data['@type'] == 'Image':
                         json.dump(data['image']['scales'], dest.joinpath('@scales').open('w'))
                 elif value_type == 'list':
