@@ -7,8 +7,9 @@ setup(
     name="prestio",
     version="0.0.3",
     description="Plone REST API IO tool",
-    py_modules=["prestio"],
-    package_dir={"": "src"},
+    packages=["prestio"],
+    package_data={"prestio": "prestio/prestio.cfg"},
+    include_package_data=True,
     long_description=long_description,
     long_description_content_type="text/markdown",
     classifiers=[
@@ -27,7 +28,7 @@ setup(
     ],
     entry_points = {
         'console_scripts': [
-            'prestio = prestio:entry',
+            'prestio = prestio.prestio:entry',
         ]
     },
 )
