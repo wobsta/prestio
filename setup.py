@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name="prestio",
-    version="0.0.3",
+    version="0.0.4",
     description="Plone REST API IO tool",
     packages=["prestio"],
     package_data={"prestio": "prestio/prestio.cfg"},
