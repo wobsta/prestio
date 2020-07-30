@@ -7,7 +7,7 @@ setup(
     name="prestio",
     version="0.0.2",
     description="Plone REST API IO tool",
-    py_modules=["helloworld"],
+    py_modules=["prestio"],
     package_dir={"": "src"},
     long_description=long_description,
     long_description_content_type="text/markdown",
